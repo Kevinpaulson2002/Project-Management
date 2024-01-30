@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="admin_dashboard.css">
+</head>
+<body>
+    <h2>Welcome, Admin!</h2>
+
+    <!-- Add New User Form -->
+    <div id >
+        <a  href="loginpage.html"><button id="adminlogout">LOGOUT</button></a>
+    </div>
+    <div class="admin-section">
+
+        <h3>Add New User</h3>
+        <form action="add_user.php" method="post">
+            <label for="user_id">User ID:</label>
+            <input type="text" name="user_id" required>
+
+            <label for="new_username">Username:</label>
+            <input type="text" name="new_username" required>
+
+            <label for="new_password">Password:</label>
+            <input type="password" name="new_password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+
+            <label for="new_role">Role:</label>
+            <select name="new_role" required>
+                <option value="manager">Manager</option>
+                <option value="employee">Employee</option>
+            </select>
+
+            <button type="submit" name="add_user">Add User</button>
+        </form>
+    </div>
+
+     <!-- Create Project Form -->
+     <div class="admin-section">
+        <h3>Create Project</h3>
+        <form action="create_project.php" method="post">
+            <label for="project_name">Project Name:</label>
+            <input type="text" name="project_name" required>
+    
+            <label for="project_description">Project Description:</label>
+            <textarea name="project_description" rows="4" required></textarea>
+    
+            <label for="start_date">Start Date:</label>
+            <input type="date" name="start_date" required>
+    
+            <label for="end_date">End Date:</label>
+            <input type="date" name="end_date" required>
+    
+            <label for="manager_id">Manager ID:</label>
+            <input type="text" name="manager_id" required>
+    
+            <!-- Assuming you have a database-generated unique project ID -->
+            <label for="project_id">Project ID:</label>
+            <input type="text" name="project_id" required>
+
+            <label for="category_id">Category ID:</label>
+            <input type="text" name="category_id" required>
+<!--updated by us for including STATUS while creating project for admin-->
+            <label for="status">Status:</label>
+            <select name="status" required>
+                <option value="In Progress">In Progress</option>
+                <option value="Not Started">Not Started</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+
+    
+            <button type="submit" name="create_project">Create Project</button>
+        </form>
+    </div>
+
+
+    
+
+    <!-- Add New Employee Form -->
+    <div class="admin-section">
+        <h3>Add New Employee</h3>
+        <form action="add_employee.php" method="post">
+            <label for="employee_id">Employee ID:</label>
+            <input type="text" name="employee_id" required>
+
+            <label for="user_id_employee">User ID:</label>
+            <input type="text" name="user_id" required><!--CHANGED THE user_id_employee to user_id-->
+
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" required>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" required>
+
+            <label for="department">Department:</label>
+            <input type="text" name="department" required>
+
+            <!-- Add additional employee fields as needed -->
+
+            <button type="submit" name="add_employee">Add Employee</button>
+        </form>
+    </div>
+    <!-- View Tasks Section -->
+    <div class="admin-section">
+        <h3>View Tasks</h3>
+        <a href="view_tasks.php" class="view-tasks-button">View Tasks</a>
+    </div>
+    <!-- View Projects Section -->
+    <div class="admin-section">
+        <h3>View Projects</h3>
+        <a href="view_projects.php" class="view-tasks-button">View Projects</a><!--VIEW TASKS CHANGED REFER  VIEW TASKS -->
+    </div>
+    <!--VIEW user TABLE-->
+    <div class="admin-section">
+        <h3>View Users</h3>
+        <a href="view_users.php" class="view-tasks-button">View Users</a>
+    </div>
+    <!--VIEW EMPLOYEE TABLE-->
+    <div class="admin-section">
+        <h3>View Employees</h3>
+        <a href="view_employees.php" class="view-tasks-button">View Employees</a><!--VIEW TASKS CHANGED REFER  VIEW TASKS -->
+    </div>
+    <!--View Category Joined With Project table-->
+    <div class="admin-section">
+        <h3>View Categories</h3>
+        <a href="view_categories.php" class="view-tasks-button">View Categories</a><!--VIEW TASKS CHANGED REFER  VIEW TASKS -->
+    </div>
+
+</body>
+</html>

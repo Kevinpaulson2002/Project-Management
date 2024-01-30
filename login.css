@@ -1,0 +1,85 @@
+/* login.css */
+
+body {
+    font-family: Arial, sans-serif;
+    
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    color:white;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value as needed */
+    padding: 20px; /* Add some padding to make it visually appealing */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin: 20px; /* Optional: Add margin for spacing */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+
+
+     
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    
+    
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#task {
+    position: absolute;
+    top: 51px;
+    left: 550px;
+    color:white;
+}
+
+.background-image {
+    /* Set the background image using the img tag */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Move the image behind other content */
+}
